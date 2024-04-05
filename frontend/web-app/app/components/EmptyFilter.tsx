@@ -5,6 +5,7 @@ import {Button}         from 'flowbite-react'
 // @ts-ignore
 import {useParamsStore} from "@/hooks/useParamStore";
 import Heading          from "@/app/components/Heading";
+import {signIn}         from "next-auth/react";
 
 
 /**
@@ -51,6 +52,9 @@ export default function EmptyFilter({
             <div className='mt-4'>
                 {showReset && (
                     <Button outline onClick={reset}>Remove Filters</Button>
+                )}
+                {showLogin && (
+                    <Button outline onClick={() => signIn('id-server', {callbackUrl})}>Login</Button>
                 )}
 
             </div>

@@ -3,8 +3,8 @@ import exp   from "node:constants";
 
 type Props = {
     title: string,
-    subTitle: string,
-    center: boolean
+    subTitle?: string,
+    center?: boolean
 }
 export default function Heading({title, subTitle, center}: Props) {
     return (
